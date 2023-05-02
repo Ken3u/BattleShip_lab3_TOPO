@@ -1,5 +1,5 @@
 import unittest
-from game import *
+from logic import *
 
 
 class TestGame(unittest.TestCase):
@@ -7,8 +7,8 @@ class TestGame(unittest.TestCase):
     def test_game_class_exists(self):
         self.assertTrue('Game' in globals())
 
-    def test_draw_table(self):
-        self.assertEqual()
+    def test_generate_enemy_ships(self):
+        self.assertEqual(generate_enemy_ships(), 0)
 
 
 
