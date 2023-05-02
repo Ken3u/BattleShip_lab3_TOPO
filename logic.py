@@ -88,8 +88,9 @@ def generate_ships(ships, s_x, s_y, ship_len1, ship_len2, ship_len3):
 
 
 def count_ships(board):
+    count = 0
     if board == 0:
-        count = 0
+        return count
     for i in range(len(board)):
         for j in range(len(board[i])):
             if board[i][j] == 1:
