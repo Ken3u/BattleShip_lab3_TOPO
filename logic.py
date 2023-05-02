@@ -74,7 +74,7 @@ def generate_ships(ships, s_x, s_y, ship_len1, ship_len2, ship_len3):
                         except Exception:
                             pass
 
-        # делаем подсчет 1ц
+        # делаем подсчет 1
         sum_1_enemy = 0
         for i in range(0, s_x):
             for j in range(0, s_y):
@@ -85,6 +85,7 @@ def generate_ships(ships, s_x, s_y, ship_len1, ship_len2, ship_len3):
         # print(ships_list)
         # print(enemy_ships)
         return enemy_ships
+
 
 
 def check_winner(x, y, enemy_ships, boom):

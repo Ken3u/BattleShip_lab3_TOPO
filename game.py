@@ -71,11 +71,14 @@ def button_begin_again():
     global points
     global enemy_ships
     global list_ids
+    global boom
     for el in list_ids:
         canvas.delete(el)
     list_ids = []
     enemy_ships = generate_ships(ships, s_x, s_y, ship_len1, ship_len2, ship_len3)
     points = [[-1 for i in range(s_x + 1)] for i in range(s_y + 1)]
+    boom = [[0 for i in range(s_x)] for i in range(s_y)]
+
 
 
 b0 = Button(tk, text="Показать корабли противника", command=button_show_enemy)
@@ -122,7 +125,7 @@ def add_to_all(event):
         if points[ip_y][ip_x] == -1:
             points[ip_y][ip_x] = _type
             draw_point(ip_x, ip_y)
-            if check_winner():
+            if check_winner(ip_x, ip_y, enemy_ships, boom):
                 print("Победа!")
                 points = [[10 for i in range(s_x + 1)] for i in range(s_y + 1)]
         print(len(list_ids))
