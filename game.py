@@ -102,6 +102,10 @@ def draw_point(x, y):
         list_ids.append(id1)
         list_ids.append(id2)
 
+
+
+
+
 def add_to_all(event):
     global points
     _type = 0  # ЛКМ
